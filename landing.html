@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Product Landing Page
+	</title>
+
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+
+	<style type="text/css">
+
+	html,body
+		{
+		    width: 100%;
+		    height: 100%;
+		    margin: 0px;
+		    padding: 0px;
+		    overflow-x: hidden; 
+		}
+
+		#header {
+			background-color: #2d2d2d;
+			text-align: center;
+			padding:  1px 0px 0px 0px;
+		}
+
+		nav {
+			background-color:  red;
+			color : #fff;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+			display: flex;
+			justify-content: space-around;
+		}
+
+		li {
+			cursor : pointer;
+			padding : 0.5rem;
+			flex: auto;
+			text-align: center;
+			padding: 20px 0px 40px 0px;
+		}
+
+		li:hover {
+			background-color: #1d1d1d;
+			color: #fff;
+		}
+
+		a {
+			text-decoration: none;
+			color : #fff;
+		}
+
+		@media all and (max-width: 600px) {
+			nav ul {
+				flex-direction: column;
+			}
+
+			nav ul li {
+				text-align: center;
+			}
+		}
+
+
+		#main {
+			text-align: center;
+			margin-top: 20px;
+			border: 30px solid red;
+			color: #fff;
+			line-height: 50px;
+			background-color: #1d1d1d;
+			width: auto;
+			height: 400px;
+		}
+
+		#video {
+			text-align: center;
+			margin: 20px 0px 50px 0px;
+			background-color: #1d1d1d;
+			padding: 20px 0px 20px 0px;
+			color: #fff;
+			border-radius: 0px;
+		}
+
+		#form {
+			width: 100%;
+			height: 400px;
+			text-align: center;
+			background-color: #1d1d1d;
+			font-size: 80px;
+			padding: 30px 0px 30px 0px;
+			color : #fff;
+		}
+
+		#email {
+			width: 300px;
+			height: 70px;
+		}
+
+		#submit {
+			width: 300px;
+			height: 70px;
+			background-color: red;
+			color: #fff;
+			border: 0px;
+		}
+
+		#submit:hover {
+			background-color: #1d1d1d;
+			color: #fff;
+			border: 1px solid red;
+		}
+
+		img {
+			border-radius: 20px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<header id='header'>
+		<p><img src="data:image/png;base64,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" id='header-img' width='5%'>
+		</p>
+		<nav id='nav-bar'>
+			<ul>
+				<li class="nav-link"><a href='#main'>Main</a></li>
+				<li class="nav-link"><a href='#video'>Teaser</a></li>
+				<li class="nav-link"><a href='#form'>Subscribe</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id='maindiv'>
+
+		<div id='main'>			
+			<p>Playlist Name : သူမအတွက်ဆိုပြဖြစ်သော သီချင်းများ</p>
+			<strong>Please Enjoy Teaser Video Below</strong>
+			<p>title : "ရန်ကုန်မြို့ထဲလမ်းပျောက်ခြင်း"<br>Composer : Ko Kabar <br>Artist : Glatt <br></p>
+
+		</div>
+
+		<div id='video'>
+			<h2>Teaser Video</h2>
+			<iframe width="70%" height="400" src="https://www.youtube.com/embed/hHcd_mgLKR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+
+		<form id='form' action='https://www.freecodecamp.com/email-submit'>
+			Subscribe My Channel<br>
+			<input id='email' type="email" name='email' placeholder="email">
+			<input id='submit' type='submit' value='submit'>
+		</form>
+
+	</main>
+
+
+</body>
+</html>
