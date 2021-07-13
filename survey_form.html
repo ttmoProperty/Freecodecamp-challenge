@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>
+    	Building a Survey Form
+    </title>
+
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap');
+	html,body
+		{
+		    width: 100%;
+		    height: 100%;
+		    margin: 0px;
+		    padding: 0px;
+		    overflow-x: hidden; 
+			font-family: 'Encode Sans SC', sans-serif;
+			background-color: #2d2d2d;
+			color : #fff;
+		}
+
+		#title {
+			/* border : 1px solid #fff; */
+			display: inline-block;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			padding: 10px 10px 10px 10px;
+			border-bottom: 5px solid #fff;
+			border-left: 5px solid #fff;
+			border-right: 5px solid #fff;
+			border-top: 5px solid #fff;
+		}
+
+		#title:hover {
+			background-color: #123456;
+		}
+
+		#description {
+			border-bottom: 3px solid #fff;
+			display: inline;
+		}
+
+		#survey-form {
+			margin-top: 20px;
+		}
+
+		#dropdown {
+			margin-top: 10px;
+		}
+
+		#radio-select {
+			margin-top: 30px;
+			margin-bottom: 10px;
+		}
+
+		#textarea {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		#submit {
+			margin-top: 20px;
+			margin-bottom: 50px;
+		}
+
+	</style>
+  </head>
+  <body>
+
+
+<div class="container">
+	<h1 id='title'>Freecodecamp</h1><br>
+  	<p id='description'>A servey form about learning coding with Freecodecamp</p>
+</div>
+
+<div class="container">
+	<form id='survey-form'>
+	  <div class="mb-3">
+	    <label for="name-label" class="form-label">Name</label>
+	    <input type="text" class="form-control" id="name-label" placeholder="name" required>
+	  </div>
+	  <div class="mb-3">
+	    <label for="email-label" class="form-label">Email</label>
+	    <input type="email" class="form-control" id="email-label" placeholder="email" required>
+	  </div>
+	  <div class="mb-3">
+	    <label for="number-label" class="form-label">How many courses did you complete?</label>
+		<input type="number" id="number-label" name="quantity" min="1" max="5" placeholder="1-5" required>	
+	  </div>
+
+	  <label for="floatingSelect">Prefer Programming Languages</label>
+		<select id='dropdown' class="form-select" id="floatingSelect" aria-label="Floating label select example">
+		  <option value="1">Python</option>
+		  <option value="2">JavaScript</option>
+		  <option value="3">C</option>
+		</select>
+		
+	  <label for="floatingSelect" id='radio-select'>Operating System</label>
+		  <div class="form-check">
+			<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+			<label class="form-check-label" for="flexRadioDefault1" name='linux'>
+			  Linux
+			</label>
+		  </div>
+		  <div class="form-check">
+			<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+			<label class="form-check-label" for="flexRadioDefault2" name='windows'>
+			  Windows
+			</label>
+		  </div>
+		  <div class="form-check">
+			<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+			<label class="form-check-label" for="flexRadioDefault2" name='mac'>
+			  Mac
+			</label>
+		  </div>
+
+		  <label for="floatingSelect" id='radio-select'>What are you?</label>
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+			<label class="form-check-label" for="flexCheckDefault" value='student'>
+			  Student
+			</label>
+		  </div>
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+			<label class="form-check-label" for="flexCheckDefault" value='worker'>
+			  Worker
+			</label>
+		  </div>
+
+		  <div class="mb-3" id='textarea'>
+			<label for="exampleFormControlTextarea1" class="form-label">Your Feedback</label>
+			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+		  </div>
+
+	  <button type="submit" id='submit' class="btn btn-primary">Submit</button>
+	</form>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
